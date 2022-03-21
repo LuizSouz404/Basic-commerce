@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Container, WrapperImage, WrapperInformation } from "./styles";
 
-export function CardItem() {
+export function CardProduct() {
   return (
     <Container>
       <WrapperImage>

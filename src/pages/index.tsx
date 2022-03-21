@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
-import { CardItem } from '../components/CardItem'
+import { CardProduct } from '../components/CardProduct'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
-      <CardItem />
+      <CardProduct />
     </div>
   )
 }
