@@ -5,6 +5,7 @@ interface WrapperFilterProps {
 }
 
 export const Container = styled.div`
+  margin: 1.5rem 0;
   display: flex;
   flex-direction: column;
   gap: .75rem;
