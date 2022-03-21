@@ -8,8 +8,8 @@ export function CardProduct() {
         <Image src="/images/sweater.png" layout="fill" alt="Camisa Social"/>
       </WrapperImage>
       <WrapperInformation>
-        <strong>Camisa Social</strong>
-        <span>$19,90</span>
+        <span>Camisa Social</span>
+        <strong>$19,90</strong>
       </WrapperInformation>
     </Container>
   )

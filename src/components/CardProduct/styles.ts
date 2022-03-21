@@ -20,14 +20,12 @@ export const WrapperInformation = styled.div`
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
 
-  strong {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    /* identical to box height */
+  span {
+    font-weight: 500;
+    font-size: 16px;
 
     letter-spacing: 0.01em;
     text-transform: capitalize;
@@ -35,13 +33,9 @@ export const WrapperInformation = styled.div`
     color: #171717;
   }
 
-  span {
-    font-family: 'Nunito Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    /* identical to box height */
+  strong {
+    font-weight: 700;
+    font-size: 18px;
 
     letter-spacing: 0.01em;
     text-transform: capitalize;
