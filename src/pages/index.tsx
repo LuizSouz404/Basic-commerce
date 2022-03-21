@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import { CardProduct } from '../components/CardProduct'
-import { Filter } from '../components/Filter'
+import { ComplexFilter } from '../components/ComplexFilter'
 import { Header } from '../components/Header'
 import styles from '../styles/Home.module.css'
 
@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <>
       <Header />
       <div className={styles.container}>
-        <Filter />
+        <ComplexFilter />
         <CardProduct />
       </div>
     </>
