@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { ActionButtonBuy, ActionButtonFav, ActionButtonSection, Container, DescriptionContent, DescriptionSection, ProductPrice, ProductTitle, WrapperImage, WrapperProductInformation } from "./styles";
+import { SelectionBoxColor } from "../SelectionBoxColor";
+import { SelectionBoxSize } from "../SelectionBoxSize";
+import { ActionButtonBuy, ActionButtonFav, ActionButtonSection, Container, DescriptionContent, DescriptionSection, ProductPrice, ProductTitle, SelectorWrapper, WrapperImage, WrapperProductInformation } from "./styles";
 
 export function DetailProduct() {
   return (
@@ -18,6 +20,11 @@ export function DetailProduct() {
           <DescriptionSection>Description</DescriptionSection>
           <DescriptionContent>Straight cut shirt jacket in sturdy, washed denim. Features a pointed collar and buttons down the front. Dropped shoulders and long sleeves with button cuffs. Detachable tie belt at the waist and a rounded hem.</DescriptionContent>
         </div>
+
+        <SelectorWrapper>
+          <SelectionBoxColor/>
+          <SelectionBoxSize/>
+        </SelectorWrapper>
 
         <ActionButtonSection>
           <ActionButtonFav>

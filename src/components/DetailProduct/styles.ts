@@ -25,6 +25,11 @@ export const WrapperImage = styled.div`
   }
 `;
 
+export const SelectorWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+`;
+
 export const WrapperProductInformation = styled.div`
   padding: 1rem 0;
   display: flex;
