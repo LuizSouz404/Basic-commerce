@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.75rem 1rem;
+  display: flex;
+  align-items: center;
   gap: 3rem;
   width: 100%;
   height: calc(100vh - 5rem);
@@ -13,13 +12,15 @@ export const Container = styled.div`
 `;
 
 export const WrapperImage = styled.div`
+  max-width: 500px;
   width: 100%;
-  height: 100%;
-  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     aspect-ratio: 1/1;
   }
@@ -31,6 +32,7 @@ export const SelectorWrapper = styled.div`
 `;
 
 export const WrapperProductInformation = styled.div`
+  width: 100%;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
