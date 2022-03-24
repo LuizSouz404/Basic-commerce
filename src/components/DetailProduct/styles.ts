@@ -58,12 +58,14 @@ export const ActionButtonSection = styled.div`
 `;
 
 export const ActionButtonFav = styled.button`
+  width: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .5rem;
+
   padding: .75rem 2rem;
-  width: 50%;
   background: transparent;
   border: 1px solid #171717;
   transition: .5s background, .5s color;
@@ -76,12 +78,14 @@ export const ActionButtonFav = styled.button`
 `;
 
 export const ActionButtonBuy = styled.button`
+  width: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .5rem;
+
   padding: .75rem 2rem;
-  width: 50%;
   background: #171717;
   color: #fff;
   border: none;

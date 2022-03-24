@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { ComplexFilter } from '../components/ComplexFilter'
 import { Header } from '../components/Header'
 import { TableProducts } from '../components/TableProducts'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Content.module.css'
 
 const Home: NextPage = () => {
   return (

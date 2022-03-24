@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, WrapperActionButton, WrapperImage, WrapperProduct } from "./styles";
+import { Container, WrapperActionButton, WrapperEditButton, WrapperDeletedButton, WrapperImage, WrapperProduct } from "./styles";
 
 export function ProductItem() {
   return (
@@ -15,12 +15,12 @@ export function ProductItem() {
       </WrapperProduct>
 
       <WrapperActionButton>
-        <button>
+        <WrapperEditButton>
           edit
-        </button>
-        <button>
+        </WrapperEditButton>
+        <WrapperDeletedButton>
           deleted
-        </button>
+        </WrapperDeletedButton>
       </WrapperActionButton>
     </Container>
   )
