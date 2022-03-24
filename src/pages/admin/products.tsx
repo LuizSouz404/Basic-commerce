@@ -3,7 +3,7 @@ import { AdminTableProduct } from "../../components/AdminComponents/AdminTablePr
 import { ButtonProduct } from "../../components/AdminComponents/ButtonCreateProduct";
 import { AdminTab } from "../../components/AdminTab";
 import { Header } from "../../components/Header";
-import styles from '../styles/Content.module.css'
+import styles from '../../styles/Content.module.css'
 
 import { FaPlus } from 'react-icons/fa'
 
