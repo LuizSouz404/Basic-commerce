@@ -1,20 +1,30 @@
-import Image from "next/image";
+import { Products } from "@prisma/client";
+import { BsHandbag, BsHeart } from 'react-icons/bs';
 import { SelectionBoxColor } from "../SelectionBoxColor";
 import { SelectionBoxSize } from "../SelectionBoxSize";
 import { ActionButtonBuy, ActionButtonFav, ActionButtonSection, Container, DescriptionContent, DescriptionSection, ProductPrice, ProductTitle, SelectorWrapper, WrapperImage, WrapperProductInformation } from "./styles";
 
-export function DetailProduct() {
+type DetailProductProps = {
+  product: Products;
+}
+
+export function DetailProduct({ product }: DetailProductProps) {
   return (
     <Container>
 
       <WrapperImage>
-        <img src="/images/dress.png" alt="Vestido" />
+        <img src={product.thumbnail} alt={product.product_name} />
       </WrapperImage>
 
       <WrapperProductInformation>
-        <ProductTitle>Ribbed polo-Neck Jumper</ProductTitle>
+        <ProductTitle>{product.product_name}</ProductTitle>
 
-        <ProductPrice>$39.90</ProductPrice>
+        <ProductPrice>
+          {new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(product.product_price)}
+        </ProductPrice>
 
         <div>
           <DescriptionSection>Description</DescriptionSection>
@@ -28,11 +38,11 @@ export function DetailProduct() {
 
         <ActionButtonSection>
           <ActionButtonFav>
-            {/* <BsHeart size={20} /> */}
+            <BsHeart size={20} />
             Adicionar a lista de desejo
           </ActionButtonFav>
           <ActionButtonBuy>
-            {/* <BsHandbag size={20} /> */}
+            <BsHandbag size={20} />
             Adicionar ao carrinho
           </ActionButtonBuy>
         </ActionButtonSection>

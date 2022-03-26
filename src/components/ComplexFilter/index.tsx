@@ -6,8 +6,6 @@ import { CategoryName, Container, WrapperFilter } from "./styles";
 export function ComplexFilter() {
   const router = useRouter();
 
-  console.log(router.pathname.replace("/", ""))
-
   return (
     <Container>
       <TitleSection>Categories</TitleSection>
@@ -18,22 +16,22 @@ export function ComplexFilter() {
             <CategoryName>todos</CategoryName>
           </div>
         </Link>
-        <Link href="/category/camisa" passHref>
+        <Link href="/category/camisas" passHref>
           <div style={{backgroundImage: `url(/images/shirt.png)`}}>
             <CategoryName>camisa</CategoryName>
           </div>
         </Link>
-        <Link href="/category/vestido" passHref>
+        <Link href="/category/vestidos" passHref>
           <div style={{backgroundImage: `url(/images/dress.png)`}}>
             <CategoryName>vestido</CategoryName>
           </div>
         </Link>
-        <Link href="/category/calça" passHref>
+        <Link href="/category/calças" passHref>
           <div style={{backgroundImage: `url(/images/pants.png)`}}>
             <CategoryName>calça</CategoryName>
           </div>
         </Link>
-        <Link href="/category/casaco" passHref>
+        <Link href="/category/casacos" passHref>
           <div style={{backgroundImage: `url(/images/jacket.png)`}}>
             <CategoryName>casaco</CategoryName>
           </div>

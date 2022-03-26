@@ -1,5 +1,6 @@
 import { Products } from '@prisma/client'
 import type { GetServerSideProps } from 'next'
+import Head from 'next/head'
 import { ComplexFilter } from '../components/ComplexFilter'
 import { Header } from '../components/Header'
 import { TableProducts } from '../components/TableProducts'
@@ -13,6 +14,9 @@ type ProductsProps = {
 const Home = ({ products }: ProductsProps) => {
   return (
     <>
+      <Head>
+        <title>Basics | Produtos</title>
+      </Head>
       <Header />
       <div className={styles.container}>
         <ComplexFilter />
