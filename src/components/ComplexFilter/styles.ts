@@ -26,7 +26,7 @@ export const WrapperFilter = styled.div<WrapperFilterProps>`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     border-radius: .5rem;
     background-size: cover;
     background-position: center;
@@ -37,14 +37,14 @@ export const WrapperFilter = styled.div<WrapperFilterProps>`
 export const CategoryName = styled.span`
   width: 100%;
   height: 100%;
-  
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   background: #00000075;
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
+  text-transform: capitalize;
 `;

@@ -5,8 +5,11 @@ export function ComplexFilter() {
   return (
     <Container>
       <TitleSection>Categories</TitleSection>
-      
-      <WrapperFilter gridNumber={4}>
+
+      <WrapperFilter gridNumber={5}>
+        <div style={{backgroundImage: `url(/images/all.png)`}}>
+          <CategoryName>todos</CategoryName>
+        </div>
         <div style={{backgroundImage: `url(/images/shirt.png)`}}>
           <CategoryName>camisa</CategoryName>
         </div>
