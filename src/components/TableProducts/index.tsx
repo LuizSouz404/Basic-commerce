@@ -1,21 +1,21 @@
+import { Products } from "@prisma/client";
 import { TitleSection } from "../../styles/Tokens";
 import { CardProduct } from "../CardProduct";
 import { Container, WrapperProducts } from "./styles";
 
-export function TableProducts() {
+type ProductsProps = {
+  products: Products[]
+}
+
+export function TableProducts({products}: ProductsProps) {
   return (
     <Container>
       <TitleSection>Product</TitleSection>
 
       <WrapperProducts>
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
+        {products.map(product => (
+          <CardProduct key={product.id} product={product}/>
+        ))}
       </WrapperProducts>
     </Container>
   )

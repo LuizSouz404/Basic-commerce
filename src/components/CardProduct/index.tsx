@@ -1,15 +1,23 @@
+import { Products } from "@prisma/client";
 import Image from "next/image";
 import { Container, WrapperImage, WrapperInformation } from "./styles";
 
-export function CardProduct() {
+type CardProps = {
+  product: Products;
+}
+
+export function CardProduct({product}: CardProps) {
   return (
     <Container>
       <WrapperImage>
-        <Image src="/images/sweater.png" layout="fill" alt="Camisa Social"/>
+        <Image src={product.thumbnail} layout="fill" alt={product.product_name}/>
       </WrapperImage>
       <WrapperInformation>
-        <span>Camisa Social</span>
-        <strong>$19,90</strong>
+        <span>{product.product_name}</span>
+        <strong>{new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+          }).format(product.product_price)}</strong>
       </WrapperInformation>
     </Container>
   )
