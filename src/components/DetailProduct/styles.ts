@@ -9,6 +9,10 @@ export const Container = styled.div`
   max-width: 1280px;
   margin: auto auto;
   padding: 2rem;
+
+  @media (max-width: 860px) {
+    flex-direction: column;
+  }
 `;
 
 export const WrapperImage = styled.div`
@@ -22,6 +26,8 @@ export const WrapperImage = styled.div`
   position: relative;
 
   div {
+    max-width: 20%;
+
     display: flex;
     flex-direction: column;
 
@@ -29,13 +35,11 @@ export const WrapperImage = styled.div`
     top: 0;
     left: 0;
 
-    border: 1px solid #33333350;
-
-
+    border: 1px solid #33333225;
 
     img {
-      width: 100px;
-      height: 100px;
+      max-width: 100px;
+      aspect-ratio: 1/1;
 
       opacity: .5;
       transition: .25s opacity;
@@ -70,7 +74,11 @@ export const WrapperProductInformation = styled.div`
   gap: .5rem;
 `;
 
-export const ProductTitle = styled.h1``;
+export const ProductTitle = styled.h1`
+  @media (max-width: 860px) {
+    text-align: center;
+  }
+`;
 
 export const ProductPrice = styled.strong`
   font-size: 28px;

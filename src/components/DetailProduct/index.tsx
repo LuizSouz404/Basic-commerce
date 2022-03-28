@@ -1,4 +1,5 @@
 import { Products } from "@prisma/client";
+import { useState } from "react";
 import { BsHandbag, BsHeart } from 'react-icons/bs';
 import { SelectionBoxColor } from "../SelectionBoxColor";
 import { SelectionBoxSize } from "../SelectionBoxSize";
@@ -37,6 +38,8 @@ const data = [
 ]
 
 export function DetailProduct({ product }: DetailProductProps) {
+  const [currentImage, setCurrentImage] = useState(0);
+
   return (
     <Container>
 
@@ -44,13 +47,13 @@ export function DetailProduct({ product }: DetailProductProps) {
         <div>
         {
           data.length > 1 && (
-            data.map(image => (
-              <img key={image.id} src={image.image} alt={image.name} />
+            data.map((image, index) => (
+              <img key={image.id} src={image.image} alt={image.name} onClick={() => setCurrentImage(index)} />
             ))
             )
           }
         </div>
-        <img src={product.thumbnail} alt={product.product_name} />
+        <img src={data[currentImage].image} alt={data[currentImage].name} />
       </WrapperImage>
 
       <WrapperProductInformation>
