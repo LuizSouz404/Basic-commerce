@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container, WrapperButton, WrapperLogo } from "./styles";
 
 export function Header() {
@@ -8,9 +9,11 @@ export function Header() {
         <Image src="/images/Menu.svg" layout="fill" alt="Menu Button"/>
       </WrapperButton>
 
-      <WrapperLogo>
-        <Image src="/images/basics.svg" layout="fill" alt="Logo"/>
-      </WrapperLogo>
+      <Link href="/" passHref>
+        <WrapperLogo>
+          <Image src="/images/basics.svg" layout="fill" alt="Logo"/>
+        </WrapperLogo>
+      </Link>
 
 
       <WrapperButton>
