@@ -12,19 +12,19 @@ export const WrapperSelector = styled.div`
 `;
 
 export const Selector = styled.div`
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  border: 1px solid #181918;
+  border: 1px solid transparent;
 
   background: transparent;
 
   &:hover {
-    background: #181918;
+    border: 2px solid #181918;
   }
 `;
 
