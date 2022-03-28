@@ -19,6 +19,37 @@ export const WrapperImage = styled.div`
   align-items: center;
   justify-content: center;
 
+  position: relative;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 1px solid #33333350;
+
+
+
+    img {
+      width: 100px;
+      height: 100px;
+
+      opacity: .5;
+      transition: .25s opacity;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      & + img {
+        border-top: 1px solid #33333350;
+      }
+    }
+  }
+
   img {
     width: 100%;
     object-fit: cover;

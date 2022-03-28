@@ -8,11 +8,48 @@ type DetailProductProps = {
   product: Products;
 }
 
+const data = [
+  {
+    id: 1,
+    name: "jacket",
+    image: "/images/jacket.png",
+  },
+  {
+    id: 2,
+    name: "dress",
+    image: "/images/dress.png",
+  },
+  {
+    id: 3,
+    name: "pants",
+    image: "/images/pants.png",
+  },
+  {
+    id: 4,
+    name: "shirt",
+    image: "/images/shirt.png",
+  },
+  {
+    id: 4,
+    name: "sweater",
+    image: "/images/sweater.png",
+  }
+]
+
 export function DetailProduct({ product }: DetailProductProps) {
   return (
     <Container>
 
       <WrapperImage>
+        <div>
+        {
+          data.length > 1 && (
+            data.map(image => (
+              <img key={image.id} src={image.image} alt={image.name} />
+            ))
+            )
+          }
+        </div>
         <img src={product.thumbnail} alt={product.product_name} />
       </WrapperImage>
 
