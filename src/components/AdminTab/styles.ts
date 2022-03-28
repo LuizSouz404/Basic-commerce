@@ -22,4 +22,5 @@ export const WrapperNav = styled.ul`
 export const NavLink = styled.li`
   display: flex;
   gap: .5rem;
+  cursor: pointer;
 `;
