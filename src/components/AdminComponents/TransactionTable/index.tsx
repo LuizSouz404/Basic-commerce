@@ -1,4 +1,4 @@
-import { MiniThumbsProducts } from '../../MiniThumbsProdcut';
+import { MiniThumbsProducts } from '../MiniThumbsProdcut';
 import { Container } from './styles';
 
 export const TransactionsTable = () => {

@@ -1,16 +1,16 @@
-import { IconBaseProps, IconType } from 'react-icons';
-import { Container } from './styles';
+import { IconBaseProps } from 'react-icons';
+import { ButtonContainer } from './styles';
 
-type ButtonProductProps = {
+interface ButtonProductProps extends React.HTMLAttributes<HTMLButtonElement> {
   title: string;
   icon?: React.ComponentType<IconBaseProps>;
 }
 
 export function ButtonProduct({title, icon: Icon}: ButtonProductProps) {
   return (
-    <Container>
+    <ButtonContainer>
       {Icon && <Icon size={20} />}
       <strong>{title}</strong>
-    </Container>
+    </ButtonContainer>
   )
 }

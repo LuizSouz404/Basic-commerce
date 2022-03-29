@@ -1,6 +1,6 @@
 import { NextPage } from "next";
+import { AdminTab } from "../../components/AdminComponents/AdminTab";
 import { Summary } from "../../components/AdminComponents/Summary";
-import { AdminTab } from "../../components/AdminTab";
 import { Header } from "../../components/Header";
 import styles from '../../styles/Content.module.css';
 
