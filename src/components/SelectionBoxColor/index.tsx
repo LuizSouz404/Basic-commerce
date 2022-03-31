@@ -34,7 +34,7 @@ export function SelectionBoxColor() {
 
       <WrapperSelector>
         {color.map(data => (
-          <Selector key={data.id} className={selected === data.id ? "active" : ""}  onClick={() => setSelected(data.id)}>
+          <Selector key={data.id} className={selected === data.id ? "active" : ""} onClick={() => setSelected(data.id)}>
             <ColorSelection
               style={{background: data.hex}}/>
           </Selector>

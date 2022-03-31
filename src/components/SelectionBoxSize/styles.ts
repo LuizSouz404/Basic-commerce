@@ -20,15 +20,17 @@ export const Selector = styled.div`
   justify-content: center;
 
   background: transparent;
+
+  cursor: pointer;
+
+  .active {
+    font-weight: 700;
+    color: #181918;
+  }
 `;
 
 export const SizeSelection = styled.div`
   text-transform: uppercase;
   font-weight: 700;
   color: #9A9A9B;
-
-  &:hover {
-    font-weight: 700;
-    color: #181918;
-  }
 `;
