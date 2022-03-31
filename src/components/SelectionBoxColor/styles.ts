@@ -9,11 +9,15 @@ export const Container = styled.div`
 export const WrapperSelector = styled.div`
   display: flex;
   gap: .5rem;
+
+  .active {
+    border: 2px solid #181918;
+  }
 `;
 
 export const Selector = styled.div`
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
 
   display: flex;
   align-items: center;
@@ -23,14 +27,12 @@ export const Selector = styled.div`
 
   background: transparent;
 
-  &:hover {
-    border: 2px solid #181918;
-  }
 `;
 
 export const ColorSelection = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
+  padding: 2px;
 
   border-radius: 100%;
 `;
