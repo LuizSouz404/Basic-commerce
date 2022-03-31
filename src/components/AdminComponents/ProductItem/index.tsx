@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Container, WrapperActionButton, WrapperEditButton, WrapperDeletedButton, WrapperImage, WrapperProduct } from "./styles";
+import { Container, WrapperActionButton, WrapperDeletedButton, WrapperEditButton, WrapperImage, WrapperProduct } from "./styles";
 
 export function ProductItem() {
   return (
@@ -12,6 +12,8 @@ export function ProductItem() {
         <strong>Vestido de bolinha</strong>
 
         <span>Estoque: 10 un.</span>
+
+        <span>R$ 12,00</span>
       </WrapperProduct>
 
       <WrapperActionButton>

@@ -21,7 +21,7 @@ export const Container = styled.form`
       color: var(--text-body);
     }
 
-    & + input {
+    & + * {
       margin-top: 1rem;
     }
   }
@@ -41,6 +41,54 @@ export const Container = styled.form`
 
     &:hover {
       filter: brightness(0.9);
+    }
+  }
+`;
+
+export const SelectorWrapper = styled.div`
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background: #e7e9ee;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  button {
+    background: transparent;
+    border: 0;
+  }
+
+  & + * {
+    margin-top: 1rem;
+  }
+`;
+
+export const Selector = styled.div`
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: #e7e9ee;
+  border: 1px solid #d7d7d7;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  border-radius: 0 0 0.25rem 0.25rem;
+
+  span {
+    padding: 10px 16px;
+
+    & + span {
+      border-top: 1px solid #00000010;
     }
   }
 `;
