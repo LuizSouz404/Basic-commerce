@@ -1,7 +1,8 @@
 import { FormEvent, useState } from 'react';
 import { FaChevronRight, FaPlus } from 'react-icons/fa';
+import { FiCamera } from 'react-icons/fi';
 import Modal from 'react-modal';
-import { Container, Selector, SelectorWrapper } from './styles';
+import { Container, Selector, SelectorImageWrapper, SelectorWrapper } from './styles';
 
 const categories = [
   "CASACOS", "CAMISAS", "VESTIDOS", "CALÇAS"
@@ -22,20 +23,35 @@ export function ModalCreateProduct({
   const [price, setPrice] = useState("");
   const [stock, setStock] = useState("");
   const [category, setCategory] = useState("");
-  const [image, setImage] = useState("");
+  const [fileSelected, setFileSelected] = useState<File>(); // also tried <string | Blob>
+
+  const handleImageChange = function (e: React.ChangeEvent<HTMLInputElement>) {
+    const fileList = e.target.files;
+
+    if (!fileList) return;
+
+    setFileSelected(fileList[0]);
+  };
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
+    if (!fileSelected) {
+      return;
+    }
+    const formData = new FormData();
+    formData.append("file", fileSelected, fileSelected.name);
+    formData.append("product_name", title);
+    formData.append("product_price", price);
+    formData.append("product_stock", stock);
+    formData.append("category", category);
+
     const dados = await fetch('http://localhost:3000/api/product/create', {
       method: "POST",
-      body: JSON.stringify({product_name: title, product_price: price, product_stock: stock, category, thumbnail: image}),
-      headers: {
-        "Content-Type": "application/json"
-      }
+      body: formData
     });
 
-    console.log(dados)
+    console.log(dados);
     onRequestClose();
   }
 
@@ -93,12 +109,17 @@ export function ModalCreateProduct({
           </Selector>
         </SelectorWrapper>
 
-        <input
-          type="text"
-          placeholder="ImageURL"
-          onChange={e => setImage(e.target.value)}
-          value={image}
-        />
+        <SelectorImageWrapper htmlFor='image'>
+          <FiCamera size={20} /> {fileSelected ? "" : "Selecione a image"}
+          <input
+            type="file"
+            data-testid="input-file"
+            id="image"
+            name="image"
+            multiple={false}
+            onChange={handleImageChange}
+          />
+        </SelectorImageWrapper>
 
         <button type="submit">Cadastrar</button>
       </Container>

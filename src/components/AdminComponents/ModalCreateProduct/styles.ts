@@ -70,10 +70,38 @@ export const SelectorWrapper = styled.div`
   }
 `;
 
+export const SelectorImageWrapper = styled.label`
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 4rem;
+  font-size: 1rem;
+  font-weight: 400;
+  background: #e7e9ee;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  input {
+    display: none;
+  }
+  &:hover {
+    background: #e7e9ee95;
+  }
+  svg {
+    color: #312e38;
+    margin-right: 1rem;
+  }
+`;
+
 export const Selector = styled.div`
   position: absolute;
   top: 100%;
   left: 0;
+  z-index: 2;
 
   background: #e7e9ee;
   border: 1px solid #d7d7d7;
