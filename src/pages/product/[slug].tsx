@@ -15,7 +15,7 @@ const Product = ({ product }: ProductProps) => {
   return (
     <>
       <Head>
-        <title>Basics | {product.product_name}</title>
+        <title>Basics | {product.product_name.charAt(0).toUpperCase() + product.product_name.slice(1)}</title>
       </Head>
       <Header />
       <DetailProduct product={product}/>
