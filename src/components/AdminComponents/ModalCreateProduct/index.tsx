@@ -26,6 +26,17 @@ export function ModalCreateProduct({
 
   async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
+
+    const dados = await fetch('http://localhost:3000/api/product/create', {
+      method: "POST",
+      body: JSON.stringify({product_name: title, product_price: price, product_stock: stock, category, thumbnail: image}),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+
+    console.log(dados)
+    onRequestClose();
   }
 
   return (
